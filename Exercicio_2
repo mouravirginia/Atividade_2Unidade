@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int operacao_soma(int valor, int x)
+{
+
+    if (valor < x - 1)
+        return valor + operacao_soma(++valor, x);
+
+    return 0;
+}
+
+int main()
+{
+
+    int num = 0;
+    int somar_num = 0;
+    printf("Digite quantos números serão somados:\n");
+    scanf("%i", &num);
+
+    somar_num = operacao_soma(somar_num, num);
+    printf("A soma total é igual a: %d\n", somar_num);
+
+    return 0;
+}
